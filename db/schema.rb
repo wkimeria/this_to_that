@@ -11,9 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131228224614) do
+ActiveRecord::Schema.define(version: 20131229020250) do
 
   create_table "puzzles", force: true do |t|
+    t.string   "start_word"
+    t.string   "end_word"
+    t.integer  "length"
+    t.integer  "score"
+    t.text     "words"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

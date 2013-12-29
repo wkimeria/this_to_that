@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Puzzle.create(start_word: 'FROG', end_word: 'BRAT', words: '["FROG","FRAG","FRAT","BRAT"]', length: 4, score:33)
