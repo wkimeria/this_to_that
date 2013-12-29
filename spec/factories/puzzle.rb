@@ -4,6 +4,6 @@ FactoryGirl.define do
     end_word  'BRAT'
     words '["FROG","FRAG","FRAT","BRAT"]'
     length 4
-    score 33
+    score 15
   end
 end

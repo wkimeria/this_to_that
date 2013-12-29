@@ -11,4 +11,9 @@ class Puzzle < ActiveRecord::Base
       :score => p.score
     }
   end
+
+  # Determine whether a puzzle has been solved
+  def self.solved?(start_word, end_word, length, words)
+    Puzzle.where({:start_word => start_word, :end_word => end_word, :length => length, :words => words}).exists?
+  end
 end

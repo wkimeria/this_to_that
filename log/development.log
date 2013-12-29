@@ -169,3 +169,19 @@ Started GET "/puzzles.json" for 127.0.0.1 at 2013-12-28 18:11:25 -0800
 Processing by PuzzlesController#generate as JSON
   [1m[35mPuzzle Load (0.9ms)[0m  SELECT "puzzles".* FROM "puzzles" ORDER BY "puzzles"."id" ASC LIMIT 1
 Completed 200 OK in 27ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+  [1m[36mPuzzle Load (0.5ms)[0m  [1mSELECT "puzzles".* FROM "puzzles" ORDER BY "puzzles"."id" ASC LIMIT 1[0m
+  [1m[35mPuzzle Load (0.2ms)[0m  SELECT "puzzles".* FROM "puzzles" ORDER BY "puzzles"."id" ASC LIMIT 1
+  [1m[36mPuzzle Load (0.7ms)[0m  [1mSELECT "puzzles".* FROM "puzzles" WHERE "puzzles"."start_word" = 'FROG'[0m
+  [1m[35mPuzzle Load (0.5ms)[0m  SELECT "puzzles".* FROM "puzzles" WHERE "puzzles"."start_word" = 'FROG'
+  [1m[36mPuzzle Load (431.7ms)[0m  [1mSELECT "puzzles".* FROM "puzzles" WHERE "puzzles"."start_word" = 'FROGE'[0m
+  [1m[35mPuzzle Load (0.2ms)[0m  SELECT "puzzles".* FROM "puzzles" WHERE "puzzles"."start_word" = 'FROGE'
+  [1m[36mPuzzle Load (0.2ms)[0m  [1mSELECT "puzzles".* FROM "puzzles" WHERE "puzzles"."start_word" = 'FROG'[0m
+  [1m[35mPuzzle Load (0.2ms)[0m  SELECT "puzzles".* FROM "puzzles" WHERE "puzzles"."start_word" = 'FROG'
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "puzzles" WHERE "puzzles"."start_word" = 'FROG'[0m
+  [1m[35mPuzzle Load (0.9ms)[0m  SELECT "puzzles".* FROM "puzzles" WHERE "puzzles"."start_word" = 'FROG' AND "puzzles"."last_word" = 'BRAT'
+SQLite3::SQLException: no such column: puzzles.last_word: SELECT "puzzles".* FROM "puzzles"  WHERE "puzzles"."start_word" = 'FROG' AND "puzzles"."last_word" = 'BRAT'
+  [1m[36mPuzzle Load (0.2ms)[0m  [1mSELECT "puzzles".* FROM "puzzles" WHERE "puzzles"."start_word" = 'FROG' AND "puzzles"."last_word" = 'BRAT'[0m
+SQLite3::SQLException: no such column: puzzles.last_word: SELECT "puzzles".* FROM "puzzles"  WHERE "puzzles"."start_word" = 'FROG' AND "puzzles"."last_word" = 'BRAT'
+  [1m[35mPuzzle Load (0.2ms)[0m  SELECT "puzzles".* FROM "puzzles" WHERE "puzzles"."start_word" = 'FROG' AND "puzzles"."end_word" = 'BRAT'
+  [1m[36mPuzzle Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "puzzles" WHERE "puzzles"."start_word" = 'FROG' AND "puzzles"."end_word" = 'BRAT' LIMIT 1[0m
+  [1m[35mPuzzle Exists (0.2ms)[0m  SELECT 1 AS one FROM "puzzles" WHERE "puzzles"."start_word" = 'FROG' AND "puzzles"."end_word" = 'BRATe' LIMIT 1
